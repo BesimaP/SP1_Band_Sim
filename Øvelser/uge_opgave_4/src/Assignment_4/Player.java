@@ -8,4 +8,9 @@ package Assignment_4;
             this.name = name;
             this.skillLevel = skillLevel;
         }
+
+        @Override
+        public String toString() {
+            return name + " (skill: " + skillLevel + ")";
+        }
     }
