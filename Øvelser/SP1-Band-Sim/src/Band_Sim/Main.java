@@ -1,7 +1,7 @@
 package Band_Sim;
 import java.util.ArrayList;
 
-    public class Main {
+    public class Main { //test test
         public static void main(String[] args) {
             // Opret forskelligt repertoire til hvert band
             ArrayList<Song> songs1 = new ArrayList<>();
