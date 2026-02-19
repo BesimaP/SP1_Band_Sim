@@ -1,7 +1,5 @@
 package Assignment_2;
 
-import Assignment_1.Student;
-
 public class Main {
     public static void main(String [] args) {
         //4 products
