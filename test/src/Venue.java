@@ -1,6 +1,4 @@
-package SP1_Band_Sim;
-
-    public class Venue {
+public class Venue {
         String name;
         int capacity;
         double payoutAmount;

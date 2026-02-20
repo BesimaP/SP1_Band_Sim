@@ -1,6 +1,4 @@
-package SP1_Band_Sim;
-
-    public class Event {
+public class Event {
         int type;
         String description;
         int fanImpact;

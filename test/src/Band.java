@@ -1,5 +1,3 @@
-package SP1_Band_Sim;
-
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -13,7 +11,7 @@ public class Band { //definerer felter
     int experiencePoints;
     double money;
     boolean isActive;
-    ArrayList<Song> songs;
+    ArrayList<Song> songs = new ArrayList<>();
     Random random;
 
 

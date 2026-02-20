@@ -1,4 +1,3 @@
-package SP1_Band_Sim;
 import java.util.ArrayList;
 
 public class Main { //test test test

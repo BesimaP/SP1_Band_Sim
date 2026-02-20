@@ -1,6 +1,4 @@
-package SP1_Band_Sim;
-
-    public class Song {
+public class Song {
         String title;
         int durationSeconds; //Varighed i sekunder
         int streams;           // antal streams
