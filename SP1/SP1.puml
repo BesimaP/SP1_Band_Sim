@@ -1,0 +1,77 @@
+@startuml
+!pragma layout smetana
+
+title Band Simulator - Klassediagram
+
+class Band {
+    - String bandName
+    - char genre
+    - int fans
+    - int maxFans
+    - int fameLevel
+    - int experiencePoints
+    - double money
+    - boolean isActive
+    - ArrayList<Song> songs
+    --
+    + Band(name, genre, fans, maxFans, fameLevel, xp, money, songs)
+    + printProfile() : void
+    + printRepertoire() : void
+    + checkStatus() : void
+    + fameSystem() : void
+    + playGig(venue, attendance) : void
+    + gainFans(amount) : void
+    + loseFans(amount) : void
+    + earnMoney(amount) : void
+    + spendMoney(amount) : boolean
+    + addXP(amount) : void
+    + levelUp() : void
+    + randomEvent() : void
+    + isActive() : boolean
+    + getFanPercentage() : double
+    + isLosingRelevance() : boolean
+    + getStatusTitle() : String
+}
+
+class Song {
+    - String title
+    - int durationSeconds
+    - int streams
+    --
+    + Song(title)
+    + getTitle() : String
+    + getDurationSeconds() : int
+    + getStreams() : int
+}
+
+class Venue {
+    - String name
+    - int capacity
+    - double payoutAmount
+    --
+    + Venue(name, capacity, payoutAmount)
+    + getName() : String
+    + getCapacity() : int
+    + payoutAmount() : double
+}
+
+class Event {
+    - int type
+    - String description
+    - int fanImpact
+    - double moneyImpact
+    --
+    + Event(type, description, fanImpact, moneyImpact)
+}
+
+class Main {
+    + main(args) : void
+}
+
+Main --> Band : opretter
+Main --> Venue : opretter
+Band --> Song : har liste af
+Band --> Venue : bruger i playGig()
+Band --> Event : bruger i randomEvent()
+
+@enduml
