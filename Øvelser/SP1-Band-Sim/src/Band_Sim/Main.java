@@ -111,4 +111,6 @@ import java.util.ArrayList;
             band1 = new Band("The Static Waves", 'R', 8500, 15000, 2, 3200, 4750.50, songs1);
             band2 = new Band("Neon Pulse", 'E', 6000, 12000, 1, 1000, 3000.0, songs2);
         }
+
+        //test tes test
     }
