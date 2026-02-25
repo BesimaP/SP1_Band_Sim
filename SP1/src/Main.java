@@ -1,31 +1,17 @@
 import java.util.ArrayList;
 
-public class Main { //test test test
+public class Main {
+    static ArrayList<Song> songs1 = new ArrayList<>();
+    static ArrayList<Song> songs2 = new ArrayList<>();
+    static Venue smallClub;
+    static Venue arena;
+    static Band band1;
+    static Band band2;
+
     public static void main(String[] args) {
-        // ~~~~~ OPRET REPERTOIRE ~~~~~
-        // ArrayList er en liste der kan gemme flere objekter af samme type
-        ArrayList<Song> songs1 = new ArrayList<>();
-        songs1.add(new Song("Midnight moon"));
-        songs1.add(new Song("Imagine"));
-        songs1.add(new Song("Nightmare"));
-
-        ArrayList<Song> songs2 = new ArrayList<>();
-        songs2.add(new Song("Neon Lights"));
-        songs2.add(new Song("Pulse Wave"));
-        songs2.add(new Song("Synth Dreams"));
-
-        // ~~~~~ OPRET VENUES ~~~~~
-        // Venue objekter repræsenterer de spillesteder bandene kan spille på
-        // Parametre: navn, kapacitet, udbetaling til bandet
-        Venue smallClub = new Venue ("The small Club", 300,800.0);
-        Venue arena = new Venue ("City Arena", 500, 1500.0);
-
-        // ~~~~~~ OPRET BANDS ~~~~~~
-        // Band objekter oprettes med alle startværdier
-        // Parametre: navn, genre, fans, maxFans, fameLevel, XP, penge, sange
-        System.out.println("                       * * * * START PROFILES * * * *");
-        Band band1 = new Band("The Static Waves", 'R', 8500, 15000, 2, 3200, 4750.50, songs1);
-        Band band2 = new Band("Neon Pulse", 'E', 6000, 12000, 1, 1000, 3000.0, songs2);
+        createSongs();
+        createVenue();
+        createBandProfile();
 
         // Udskriv startprofiler for begge bands
         band1.printProfile();
@@ -87,5 +73,35 @@ public class Main { //test test test
         } else {
             System.out.println("Both bands have the same number of fans!");
         }
+    }
+
+    public static void createSongs(){
+        // ~~~~~ OPRET REPERTOIRE ~~~~~
+        // ArrayList er en liste der kan gemme flere objekter af samme type
+
+        songs1.add(new Song("Midnight moon"));
+        songs1.add(new Song("Imagine"));
+        songs1.add(new Song("Nightmare"));
+
+        songs2.add(new Song("Neon Lights"));
+        songs2.add(new Song("Pulse Wave"));
+        songs2.add(new Song("Synth Dreams"));
+    }
+
+    public static void createVenue(){
+        // ~~~~~ OPRET VENUES ~~~~~
+        // Venue objekter repræsenterer de spillesteder bandene kan spille på
+        // Parametre: navn, kapacitet, udbetaling til bandet
+        smallClub = new Venue ("The small Club", 300,800.0);
+        arena = new Venue ("City Arena", 500, 1500.0);
+    }
+
+    public static void createBandProfile(){
+        // ~~~~~~ OPRET BANDS ~~~~~~
+        // Band objekter oprettes med alle startværdier
+        // Parametre: navn, genre, fans, maxFans, fameLevel, XP, penge, sange
+        System.out.println("                       * * * * START PROFILES * * * *");
+        band1 = new Band("The Static Waves", 'R', 8500, 15000, 2, 3200, 4750.50, songs1);
+        band2 = new Band("Neon Pulse", 'E', 6000, 12000, 1, 1000, 3000.0, songs2);
     }
 }

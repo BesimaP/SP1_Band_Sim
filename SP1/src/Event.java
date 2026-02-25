@@ -1,8 +1,8 @@
 public class Event {
-        int type;               //  Begivenhedens type (1,2 elelr 3)
-        String description;     //  Beskrivelse af hvad der sker
-        int fanImpact;          //  Hvor mange fans bandet vinder eller mister (positiv/negativ)
-        double moneyImpact;     //  Hvor mange penge bandet vinder eller mister (positiv/negativ)
+        private int type;               //  Begivenhedens type (1,2 elelr 3)
+        private String description;     //  Beskrivelse af hvad der sker
+        private int fanImpact;          //  Hvor mange fans bandet vinder eller mister (positiv/negativ)
+        private double moneyImpact;     //  Hvor mange penge bandet vinder eller mister (positiv/negativ)
 
         // Constructor - opretter en begivenhed med alle oplysninger
         public Event(int type, String description, int fanImpact, double moneyImpact){
@@ -11,7 +11,23 @@ public class Event {
             this.fanImpact = fanImpact;
             this.moneyImpact = moneyImpact;
         }
+
+    public String getDescription() {
+        return description;
     }
+
+    public int getType() {
+        return type;
+    }
+
+    public int getFanImpact() {
+        return fanImpact;
+    }
+
+    public double getMoneyImpact() {
+        return moneyImpact;
+    }
+}
 
     // Tænk på det som en nyhedsartikel om bandet. Hver artikel har:
 

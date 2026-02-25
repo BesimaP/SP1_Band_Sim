@@ -1,9 +1,9 @@
 
 // Venue klassen repræsenterer et spillested hvor bandet kan spille koncert
     public class Venue {
-            String name;                // Spillestedets navn
-            int capacity;               // Hvor mange tilskuere der er plads til
-            double payoutAmount;        // Hvor meget bandet tjener på at spille her
+            private String name;                // Spillestedets navn
+            private int capacity;               // Hvor mange tilskuere der er plads til
+            private double payoutAmount;        // Hvor meget bandet tjener på at spille her
 
     // Constructor - opretter et spillested med navn, kapacitet og udbetaling
             public Venue(String name, int capacity, double payoutAmount){

@@ -62,7 +62,7 @@ public class Band {
             System.out.println("WARNING: Losing relevance! Consider a comeback strategy.");
         }
         if (!isActive()) System.out.println("The band has broken up…");
-        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
 
 
@@ -89,7 +89,7 @@ public class Band {
     // Udskriver alle sange i bandets repertoire med et for-each loop
     void printRepertoire(){
         for(Song song : songs){
-            System.out.println("- " + song.title);
+            System.out.println("- " + song.getTitle());
         }
     }
 
@@ -156,7 +156,7 @@ public class Band {
             default:
                 System.out.println("Invalid fame level");
         }
-        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
     }
 
 
@@ -244,20 +244,20 @@ public class Band {
         // Vælg en tilfældig begivenhed fra arrayet
         //Vælger en tilfældig begivenhed fra arrayet. random.nextInt(3) giver et tilfældigt tal mellem 0 og 2, og det bruges til at vælge én af de 3 events.
         Event e = events[random.nextInt(events.length)];
-        System.out.println(bandName + ": Random Event: " + e.description);
+        System.out.println(bandName + ": Random Event: " + e.getDescription());
 
         // Anvend begivenhedens effekt på fans og penge
         //Tjekker om begivenheden påvirker fans. Math.abs bruges fordi loseFans() forventer et positivt tal — så -300 bliver til 300.
-        if (e.fanImpact > 0) {
-            gainFans(e.fanImpact);
-        } else if (e.fanImpact < 0) {
-            loseFans(Math.abs(e.fanImpact)); // Math.abs sikrer at vi altid sender et positivt tal ind i loseFans(). betyder bare "den absolutte værdi"
+        if (e.getFanImpact() > 0) {
+            gainFans(e.getFanImpact());
+        } else if (e.getFanImpact() < 0) {
+            loseFans(Math.abs(e.getFanImpact())); // Math.abs sikrer at vi altid sender et positivt tal ind i loseFans(). betyder bare "den absolutte værdi"
         }
 
         //Tjekker om begivenheden påvirker penge — kun hvis det ikke er 0.
-        if (e.moneyImpact != 0) {
-            money += e.moneyImpact;
-            System.out.println("  Money impact: $" + e.moneyImpact);
+        if (e.getMoneyImpact() != 0) {
+            money += e.getMoneyImpact();
+            System.out.println("  Money impact: $" + e.getMoneyImpact());
         }
 
     }

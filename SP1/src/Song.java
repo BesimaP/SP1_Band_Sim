@@ -1,7 +1,7 @@
 public class Song {
-        String title;           //Sangens titel
-        int durationSeconds;    //Varighed i sekunder
-        int streams;           // Antal streams sangen har fået
+        private String title;           //Sangens titel
+        private int durationSeconds;    //Varighed i sekunder
+        private int streams;           // Antal streams sangen har fået
 
         //Constructor - opretter en sang med en titel
         // durationSeconds og streams sættes til 0 som standard
