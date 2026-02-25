@@ -28,7 +28,7 @@
             }
         }
 
-        // Tænk på det som en koncertsal i det virkelige liv. Hver koncertsal har:
+        //Det som en koncertsal i det virkelige liv. Hver koncertsal har:
 
         //Et name (hvad hedder stedet? fx "City Arena")
         //En capacity (hvor mange mennesker er der plads til?)
