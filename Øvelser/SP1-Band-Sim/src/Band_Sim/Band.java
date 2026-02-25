@@ -1,19 +1,28 @@
 package Band_Sim;
-
 import java.util.ArrayList;
 import java.util.Random;
     //Opretter klasse
     public class Band { //definerer felter
-        String bandName;
-        char genre;
-        int fans;
-        int maxFans;
-        int fameLevel;
-        int experiencePoints;
-        double money;
-        boolean isActive;
-        ArrayList<Song> songs;
-        Random random;
+        private String bandName;
+        private char genre;
+        private int fans;
+        private int maxFans;
+        private int fameLevel;
+        private int experiencePoints;
+        private double money;
+        private boolean isActive;
+        private ArrayList<Song> songs;
+        private Random random;
+
+
+        public String getBandName() {
+            return bandName;
+        }
+
+
+        public int getFans() {
+            return fans;
+        }
 
 
 
